@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PNI PROJEKT</title>
+</head>
+<body>
+    <nav>
+        {% if request.user.role == 'adm' %}
+            <a href="">Professors</a>
+        {% end if %}
+        <a href="">Students</a>
+        <a href="/html/">Courses</a>
+        <a href="{% url 'logout' %}">Logout</a>
+    </nav>
+    {% block login %}
+    {% endblock %}
+    {% block home %}
+    {% endblock %}
+</body>
+</html>
